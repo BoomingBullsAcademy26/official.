@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booming Bulls Academy</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(180deg, #0f172a, #111827, #1e293b);
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    /* HEADER */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .logo-img {
+      width: 40px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .logo-text {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #4ade80;
+      text-align: center;
+    }
+
+    .sebi-text {
+      color: #fff;
+      font-size: 0.8rem;
+      text-align: center;
+    }
+
+    /* HERO SECTION */
+    .hero-title {
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .hero-sub {
+      text-align: center;
+      color: #d1d5db;
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+    }
+
+    .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      background: #2563eb;
+      color: #fff;
+      padding: 12px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 10px;
+      margin: 15px 0;
+      font-size: 0.95rem;
+    }
+
+    .btn img {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* FEATURES */
+    .section-title {
+      font-weight: 600;
+      text-align: center;
+      margin: 20px 0 10px;
+      color: #4ade80;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .feature-card {
+      background: #1f2937;
+      padding: 12px;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    .feature-card span {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 1.2rem;
+    }
+
+    /* TRACK RECORD */
+    .record {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .record-box {
+      background: #1f2937;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 0.8rem;
+    }
+
+    .accuracy-badge {
+      display: block;
+      text-align: center;
+      background: #16a34a;
+      margin: 10px auto;
+      width: fit-content;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+
+    /* TESTIMONIALS */
+    .testimonial {
+      background: #1f2937;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 10px;
+      font-size: 0.85rem;
+    }
+
+    .testimonial strong {
+      display: block;
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+      color: #4ade80;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.8rem;
+      color: #9ca3af;
+    }
+
+    .social {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .locations {
+      font-size: 0.8rem;
+      color: #ccc;
+      margin-top: 15px;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+      <img src="https://boomingbulls.com/wp-content/uploads/2023/05/Booming-Bulls-Logo.jpg" alt="Booming Bulls Logo" class="logo-img">
+      <div>
+        <div class="logo-text">Booming Bulls Academy</div>
+        <div class="sebi-text">SEBI Registered®</div>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <h1 class="hero-title">Transform <span style="color:#a78bfa;">Your</span> Trading Journey</h1>
+    <p class="hero-sub">Join 50,000+ traders getting profitable signals daily</p>
+    <a href="https://t.me/+bboEnJXp3s1kN2U1" class="btn" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram"> 
+      Join Free Telegram Channel
+    </a>
+
+    <!-- FEATURES -->
+    <h2 class="section-title">Why Choose Booming Bulls Academy?</h2>
+    <div class="features">
+      <div class="feature-card">
+        <span>📈</span>
+        Live Daily Trades<br>From my portfolio to yours!
+      </div>
+      <div class="feature-card">
+        <span>🔥</span>
+        Exclusive Signals<br>Get the same trades I take!
+      </div>
+      <div class="feature-card">
+        <span>💯</span>
+        High Accuracy<br>Consistent proven strategy!
+      </div>
+      <div class="feature-card">
+        <span>⏱️</span>
+        Real-Time Updates<br>Instant market alerts!
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <a href="https://t.me/+bboEnJXp3s1kN2U1" class="btn" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram"> 
+      Join Free Telegram Channel
+    </a>
+
+    <!-- TRACK RECORD -->
+    <h2 class="section-title">Proven Track Record</h2>
+    <div class="record">
+      <div class="record-box">6 Months<br>No Loss</div>
+      <div class="record-box">2-4<br>Daily Free Signals</div>
+      <div class="record-box">Live<br>Market Analysis</div>
+    </div>
+    <span class="accuracy-badge">ACCURACY 95%</span>
+
+    <!-- TESTIMONIALS -->
+    <h2 class="section-title">What Our Members Say</h2>
+    <div class="testimonial">
+      <strong>Rajesh Kumar - Day Trader</strong>
+      "The signals are incredibly accurate. I've been profitable for 4 months straight following their recommendations!"
+    </div>
+    <div class="testimonial">
+      <strong>Priya Sharma - Swing Trader</strong>
+      "Real-time alerts helped me capture perfect entry and exit points. Highly recommend!"
+    </div>
+    <div class="testimonial">
+      <strong>Amit Patel - Options Trader</strong>
+      "Best trading community I've joined. The educational content is top-notch!"
+    </div>
+
+    <!-- FINAL CTA -->
+    <h2 class="section-title">Don't Miss Out on Daily Profits</h2>
+    <p class="hero-sub">Join thousands of successful traders today. It's completely FREE!</p>
+    <a href="https://t.me/+bboEnJXp3s1kN2U1" class="btn" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram"> 
+      Join Free Telegram Channel Now
+    </a>
+
+    <!-- FOOTER -->
+    <footer>
+      <div>Booming Bulls - SEBI Registered</div>
+      <div class="social">
+        <span>🐦</span> <span>📘</span> <span>▶️</span>
+      </div>
+      <div class="locations">Surat | Delhi | Jaipur | Hyderabad | Ahmedabad | Indore | Nagpur | Mumbai</div>
+    </footer>
+
+  </div>
+</body>
+</html>
