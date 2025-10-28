@@ -10,19 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+Devanagari:wght@400;700;900&display=swap" rel="stylesheet">
     
     <style>
-        /* Apply Hindi font first, then fallback to Inter */
+        /* ... aapka saara CSS code yahan ... */
         body {
             font-family: 'Noto Sans Devanagari', 'Inter', sans-serif;
-            /* Removed cursor: pointer; */
         }
-        /* Custom gradient for the premium look */
         .premium-bg {
-            background: linear-gradient(135deg, #1a237e 0%, #000000 100%); /* Deep Blue to Black */
+            background: linear-gradient(135deg, #1a237e 0%, #000000 100%);
         }
-        
-        /* Improved Glowing effect for the button */
         .glow-button {
-            /* Button gradient */
             background-image: linear-gradient(to right, #25D366 0%, #128C7E 100%);
             border: none;
             box-shadow: 0 0 15px #25D366, 0 0 25px #25D366;
@@ -31,55 +26,33 @@
             position: relative; 
             z-index: 10; 
         }
-
         .glow-button:hover {
             transform: scale(1.05);
             box-shadow: 0 0 25px #34d399, 0 0 40px #34d399;
         }
-
         @keyframes pulse-glow {
-            from {
-                box-shadow: 0 0 10px #25D366, 0 0 20px #25D366;
-            }
-            to {
-                box-shadow: 0 0 20px #34d399, 0 0 35px #34d399;
-            }
+            from { box-shadow: 0 0 10px #25D366, 0 0 20px #25D366; }
+            to { box-shadow: 0 0 20px #34d399, 0 0 35px #34d399; }
         }
-
         .text-above-button { margin-bottom: 1rem; margin-top: 2rem; }
         .services-section-mt { margin-top: 2rem; }
-        
-        .content-container {
-            position: relative; 
-            z-index: 5;
-        }
-
+        .content-container { position: relative; z-index: 5; }
     </style>
 
     <script type="text/javascript">
         (function() {
-            // User Agent string ko check karte hain
             var ua = navigator.userAgent || navigator.vendor || window.opera;
-
-            // Check karte hain ki kya yeh Facebook ka in-app browser hai
             var isFacebookApp = (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
-            
-            // Check karte hain ki kya yeh Android device hai
             var isAndroid = (ua.indexOf("Android") > -1);
 
-            // Agar yeh Facebook App hai AUR Android hai
             if (isFacebookApp && isAndroid) {
-                
-                // Current URL lete hain
                 var currentUrl = window.location.href;
+                var cleanUrl = currentUrl.replace(/^(https://?:\/\/)/, '');
                 
-                // URL se "http://" ya "https://
-                var cleanUrl = currentUrl.replace(/^(https?:\/\/)/, '');
+                // --- YEH LINE BADAL GAYI HAI ---
+                // Humne 'package=com.android.chrome;' hata diya hai
+                var intentUrl = "intent://" + cleanUrl + "#Intent;scheme=https;end";
                 
-                // Google Chrome mein kholne ke liye ek special 'intent' URL banate hain
-                var intentUrl = "intent://" + cleanUrl + "#Intent;scheme=https;package=com.android.chrome;end";
-                
-                // User ko is special URL par bhej dete hain
                 window.location.href = intentUrl;
             }
         })();
@@ -90,9 +63,7 @@
     <div class="max-w-lg w-full bg-black bg-opacity-60 rounded-2xl shadow-2xl p-6 md:p-10 backdrop-blur-md border border-gray-700 content-container">
         
         <header class="text-center mb-6">
-            <div class="text-6xl text-amber-400 mb-4" aria-hidden="true">
-                👑
-            </div>
+            <div class="text-6xl text-amber-400 mb-4" aria-hidden="true">👑</div>
             <h1 class="text-5xl md:text-6xl font-black text-amber-400 drop-shadow-lg" style="font-family: 'Noto Sans Devanagari', sans-serif;">
                 कल्याण मटका
             </h1>
@@ -105,11 +76,9 @@
         </header>
 
         <main class="text-center">
-            
             <h4 class="text-lg md:text-xl font-semibold text-gray-100 mb-6">
                 आज का 100% फिक्स सिंगल जोड़ी, पत्ती सीधा कंपनी से पाएं।
             </h4>
-
             <p class="text-lg font-semibold text-gray-100 text-above-button"> 
                 अभी जुड़ें!
             </p>
@@ -117,18 +86,15 @@
                 <a href="https://boomingbullsacademy26.github.io/boomingbullsofficial/"
                    class="glow-button inline-flex items-center justify-center w-full max-w-sm mx-auto text-white text-2xl md:text-3xl font-bold py-4 px-6 rounded-full"
                    target="_blank" rel="noopener noreferrer"> 
-                   
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 md:h-10 md:w-10 mr-3" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.447-4.434-9.884-9.888-9.884-5.448 0-9.886 4.434-9.889 9.884-.001 2.225.651 4.315 1.847 6.03l-1.214 4.404 4.464-1.157z"/>
                     </svg>
                     व्हाट्सएप पर जुड़ें
-                    
                 </a>
             </div>
-
             <div class="text-left services-section-mt"> 
                 <h4 class="text-2xl font-bold text-center text-amber-400 mb-4">
-                    हमारी सर्विस क्यों चुनें?
+                     हमारी सर्विस क्यों चुनें?
                 </h4>
                 <ul class="space-y-3 list-inside">
                     <li class="flex items-center text-gray-100 text-lg">
@@ -149,7 +115,6 @@
                     </li>
                 </ul>
             </div>
-
         </main>
 
         <footer class="mt-10 pt-6 border-t border-gray-700">
@@ -157,8 +122,6 @@
                 <strong>अस्वीकरण:</strong> यह खेल वित्तीय जोखिम भरा हो सकता है और इसकी लत लग सकती है। कृपया अपनी जिम्मेदारी पर और अपने जोखिम पर खेलें। यह सेवा केवल 18+ वयस्कों के लिए है।
             </p>
         </footer>
-
     </div>
-
-    </body>
+</body>
 </html>
