@@ -10,30 +10,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+Devanagari:wght@400;700;900&display=swap" rel="stylesheet">
     
     <style>
-        /* ... aapka saara CSS code yahan ... */
         body {
             font-family: 'Noto Sans Devanagari', 'Inter', sans-serif;
         }
         .premium-bg {
             background: linear-gradient(135deg, #1a237e 0%, #000000 100%);
         }
+
+        /* --- बदला हुआ बटन स्टाइल --- */
         .glow-button {
             background-image: linear-gradient(to right, #25D366 0%, #128C7E 100%);
             border: none;
             box-shadow: 0 0 15px #25D366, 0 0 25px #25D366;
             animation: pulse-glow 1.5s infinite ease-in-out alternate;
-            transition: all 0.3s ease;
+            transition: all 0.3s ease-in-out; /* बदला हुआ */
             position: relative; 
             z-index: 10; 
         }
+
+        /* --- बदला हुआ HOVER स्टाइल --- */
         .glow-button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 25px #34d399, 0 0 40px #34d399;
+            transform: scale(1.05) translateY(-3px); /* बदला हुआ */
+            box-shadow: 0 0 30px #34d399, 0 0 50px #34d399; /* बदला हुआ */
+            background-image: linear-gradient(to left, #25D366 0%, #128C7E 100%); /* बदला हुआ */
         }
+
+        /* --- बदला हुआ KEYFRAME स्टाइल --- */
         @keyframes pulse-glow {
             from { box-shadow: 0 0 10px #25D366, 0 0 20px #25D366; }
-            to { box-shadow: 0 0 20px #34d399, 0 0 35px #34d399; }
+            to { box-shadow: 0 0 25px #34d399, 0 0 40px #34d399; } /* बदला हुआ */
         }
+
         .text-above-button { margin-bottom: 1rem; margin-top: 2rem; }
         .services-section-mt { margin-top: 2rem; }
         .content-container { position: relative; z-index: 5; }
@@ -49,8 +56,6 @@
                 var currentUrl = window.location.href;
                 var cleanUrl = currentUrl.replace(/^(https://?:\/\/)/, '');
                 
-                // --- YEH LINE BADAL GAYI HAI ---
-                // Humne 'package=com.android.chrome;' hata diya hai
                 var intentUrl = "intent://" + cleanUrl + "#Intent;scheme=https;end";
                 
                 window.location.href = intentUrl;
@@ -60,33 +65,36 @@
     </head>
 <body class="premium-bg text-white min-h-screen flex items-center justify-center p-4">
 
-    <div class="max-w-lg w-full bg-black bg-opacity-60 rounded-2xl shadow-2xl p-6 md:p-10 backdrop-blur-md border border-gray-700 content-container">
+    <div class="max-w-lg w-full bg-black bg-opacity-60 rounded-2xl shadow-2xl p-5 md:p-8 backdrop-blur-md border border-gray-700 content-container">
         
         <header class="text-center mb-6">
-            <div class="text-6xl text-amber-400 mb-4" aria-hidden="true">👑</div>
-            <h1 class="text-5xl md:text-6xl font-black text-amber-400 drop-shadow-lg" style="font-family: 'Noto Sans Devanagari', sans-serif;">
+            <div class="text-5xl text-amber-400 mb-4" aria-hidden="true">👑</div>
+            <h1 class="text-4xl md:text-5xl font-black text-amber-400 drop-shadow-lg" style="font-family: 'Noto Sans Devanagari', sans-serif;">
                 कल्याण मटका
             </h1>
-            <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">
+            <h2 class="text-2xl md:text-4xl font-bold text-white mt-2">
                 गोल्ड वीआईपी चार्ट
             </h2>
-            <h3 class="text-2xl md:text-3xl font-semibold text-gray-200 mt-4">
+            <h3 class="text-xl md:text-2xl font-semibold text-gray-200 mt-4">
                 <span class="text-amber-300">राज भाई</span>
             </h3>
         </header>
 
         <main class="text-center">
-            <h4 class="text-lg md:text-xl font-semibold text-gray-100 mb-6">
+            
+            <h4 class="text-base md:text-lg font-semibold text-gray-100 mb-6">
                 आज का 100% फिक्स सिंगल जोड़ी, पत्ती सीधा कंपनी से पाएं।
             </h4>
-            <p class="text-lg font-semibold text-gray-100 text-above-button"> 
+            
+            <p class="text-base md:text-lg font-semibold text-gray-100 text-above-button"> 
                 अभी जुड़ें!
             </p>
             <div class="mb-8 relative"> 
-                <a href="https://boomingbullsacademy26.github.io/boomingbullsofficial/"
-                   class="glow-button inline-flex items-center justify-center w-full max-w-sm mx-auto text-white text-2xl md:text-3xl font-bold py-4 px-6 rounded-full"
+                
+                <a href="https://tinyurl.com/534628r4"
+                   class="glow-button inline-flex items-center justify-center w-full max-w-sm mx-auto text-white text-lg md:text-2xl font-bold py-4 px-6 rounded-full"
                    target="_blank" rel="noopener noreferrer"> 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 md:h-10 md:w-10 mr-3" viewBox="0 0 24 24" fill="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-8 md:w-8 mr-3" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.447-4.434-9.884-9.888-9.884-5.448 0-9.886 4.434-9.889 9.884-.001 2.225.651 4.315 1.847 6.03l-1.214 4.404 4.464-1.157z"/>
                     </svg>
                     व्हाट्सएप पर जुड़ें
@@ -94,22 +102,23 @@
             </div>
             <div class="text-left services-section-mt"> 
                 <h4 class="text-2xl font-bold text-center text-amber-400 mb-4">
-                     हमारी सर्विस क्यों चुनें?
+                    हमारी सर्विस क्यों चुनें?
                 </h4>
                 <ul class="space-y-3 list-inside">
-                    <li class="flex items-center text-gray-100 text-lg">
+                    
+                    <li class="flex items-center text-gray-100 text-base md:text-lg">
                         <span class="text-green-400 mr-2" aria-hidden="true">🎯</span>
                         <strong>डेली फिक्स गेम:</strong>&nbsp;सिंगल ओपन, क्लोज, जोड़ी और पत्ती।
                     </li>
-                    <li class="flex items-center text-gray-100 text-lg">
+                    <li class="flex items-center text-gray-100 text-base md:text-lg">
                         <span class="text-green-400 mr-2" aria-hidden="true">💯</span>
                         <strong>पास की गारंटी:</strong>&nbsp;हमारा गेम कभी फेल नहीं होता।
                     </li>
-                    <li class="flex items-center text-gray-100 text-lg">
+                    <li class="flex items-center text-gray-100 text-base md:text-lg">
                         <span class="text-green-400 mr-2" aria-hidden="true">⏰</span>
                         <strong>फ़ास्ट सर्विस:</strong>&nbsp;गेम टाइम से 1 घंटा पहले आपके व्हाट्सएप पर।
                     </li>
-                    <li class="flex items-center text-gray-100 text-lg">
+                    <li class="flex items-center text-gray-100 text-base md:text-lg">
                         <span class="text-green-400 mr-2" aria-hidden="true">🤝</span>
                         <strong>सीधा संपर्क:</strong>&nbsp;कोई फ्रॉड नहीं, सीधा राज भाई से बात करें।
                     </li>
